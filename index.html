@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>GRAD PR Calculator</title>
+  </head>
+
+  <body>
+    <div>
+      <fieldset style="display: inline-flex">
+        <div>
+          <img src="./img/assets/Vocal_Insight.png" style="display: block; margin: auto" />
+          <div class="number-input" style="margin: 10px; display: flex; flex-direction: column">
+            <button id="InsightInput_plus_0" class="plus" onclick="setInsightCount(0, 1)"></button>
+            <input
+              id="InsightInput_0"
+              type="number"
+              min="0"
+              max="16"
+              value="0"
+              onchange="setResultTable()"
+            /><button id="InsightInput_minus_0" onclick="setInsightCount(0, -1)"></button>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset style="display: inline-flex">
+        <div>
+          <img src="./img/assets/Dance_Insight.png" style="display: block; margin: auto" />
+          <div class="number-input" style="margin: 10px; display: flex; flex-direction: column">
+            <button id="InsightInput_plus_1" class="plus" onclick="setInsightCount(1, 1)"></button>
+            <input
+              id="InsightInput_1"
+              type="number"
+              min="0"
+              max="16"
+              value="0"
+              onchange="setResultTable()"
+            /><button id="InsightInput_minus_1" onclick="setInsightCount(1, -1)"></button>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset style="display: inline-flex">
+        <div>
+          <img src="./img/assets/Visual_Insight.png" style="display: block; margin: auto" />
+          <div class="number-input" style="margin: 10px; display: flex; flex-direction: column">
+            <button id="InsightInput_plus_2" class="plus" onclick="setInsightCount(2, 1)"></button>
+            <input
+              id="InsightInput_2"
+              type="number"
+              min="0"
+              max="16"
+              value="0"
+              onchange="setResultTable()"
+            />
+            <button id="InsightInput_minus_2" onclick="setInsightCount(2, -1)"></button>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset style="display: inline-flex">
+        <div>
+          <img src="./img/assets/Mental_Insight.png" style="display: block; margin: auto" />
+          <div class="number-input" style="margin: 10px; display: flex; flex-direction: column">
+            <button id="InsightInput_plus_3" class="plus" onclick="setInsightCount(3, 1)"></button>
+            <input
+              id="InsightInput_3"
+              type="number"
+              min="0"
+              max="16"
+              value="0"
+              onchange="setResultTable()"
+            />
+            <button id="InsightInput_minus_3" onclick="setInsightCount(3, -1)"></button>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset style="display: inline-flex">
+        <div>
+          <img src="./img/assets/SSR_Insight.png" style="display: block; margin: auto" />
+          <div class="number-input" style="margin: 10px; display: flex; flex-direction: column">
+            <button id="InsightInput_plus_4" class="plus" onclick="setInsightCount(4, 1)"></button>
+            <input
+              id="InsightInput_4"
+              type="number"
+              min="0"
+              max="8"
+              value="0"
+              onchange="setResultTable()"
+            />
+            <button id="InsightInput_minus_4" onclick="setInsightCount(4, -1)"></button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div>
+      <fieldset style="width: max-content">
+        <legend>PR</legend>
+
+        <input type="radio" id="pr_1" name="pr" value="1" onclick="setResultTable()" checked />
+        <label for="pr_1">채널 인터넷 방송</label>
+
+        <input type="radio" id="pr_2" name="pr" value="2" onclick="setResultTable()" />
+        <label for="pr_2">샵 이벤트</label>
+
+        <input type="radio" id="pr_3" name="pr" value="3" onclick="setResultTable()" />
+        <label for="pr_3">상품 프로모션</label>
+      </fieldset>
+    </div>
+
+    <div>
+      <fieldset style="width: max-content; text-align: center">
+        <legend>상승량</legend>
+        <div id="PROMOTION"></div>
+        <div id="RESULTS" style="width: max-content; margin: 0 auto">
+          <table>
+            <thead>
+              <tr>
+                <th>Vo</th>
+                <th>Da</th>
+                <th>Vi</th>
+                <th>Me</th>
+                <th>SP</th>
+                <th>팬 수</th>
+                <th>만족도</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td id="Vo_Result"></td>
+                <td id="Da_Result"></td>
+                <td id="Vi_Result"></td>
+                <td id="Me_Result"></td>
+                <td id="SP_Result"></td>
+                <td id="FanNumber_Result"></td>
+                <td id="FanSatisfaction_Result"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+    </div>
+
+    <hr />
+    <div id="NOTE">
+      <h4>◎ 기준상승량</h4>
+      <img src="./img/base_20210807.png" />
+      <br />
+      ※ 노랑색 셀은 추측값, 검증 필요
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="IndexScripts.js"></script>
+  </body>
+</html>
