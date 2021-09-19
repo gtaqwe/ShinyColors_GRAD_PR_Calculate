@@ -84,22 +84,19 @@ function setResultTable() {
     );
   obj.fanNum =
     baseStat[5] +
-    Math.ceil(
-      fanNumBaseUp[inputInsight.vo] * (inputInsight.vo_add ? 1.8 : 1) +
-        fanNumBaseUp[inputInsight.da] * (inputInsight.da_add ? 1.8 : 1) +
-        fanNumBaseUp[inputInsight.vi] * (inputInsight.vi_add ? 1.8 : 1) +
-        fanNumBaseUp[inputInsight.me] * 1 +
-        fanNumBaseUp[inputInsight.ssr] * 1
-    );
+    Math.ceil(fanNumBaseUp[inputInsight.vo] * (inputInsight.vo_add ? 1.8 : 1)) +
+    Math.ceil(fanNumBaseUp[inputInsight.da] * (inputInsight.da_add ? 1.8 : 1)) +
+    Math.ceil(fanNumBaseUp[inputInsight.vi] * (inputInsight.vi_add ? 1.8 : 1)) +
+    fanNumBaseUp[inputInsight.me] * 1 +
+    fanNumBaseUp[inputInsight.ssr] * 1;
+
   obj.fanSat =
     baseStat[6] +
-    Math.ceil(
-      fanSatBaseUp[inputInsight.vo] * (inputInsight.vo_add ? 1.2 : 1) +
-        fanSatBaseUp[inputInsight.da] * (inputInsight.da_add ? 1.2 : 1) +
-        fanSatBaseUp[inputInsight.vi] * (inputInsight.vi_add ? 1.2 : 1) +
-        fanSatBaseUp[inputInsight.me] * 1 +
-        fanSatBaseUp[inputInsight.ssr] * 2.5
-    );
+    Math.ceil(fanSatBaseUp[inputInsight.vo] * (inputInsight.vo_add ? 1.2 : 1)) +
+    Math.ceil(fanSatBaseUp[inputInsight.da] * (inputInsight.da_add ? 1.2 : 1)) +
+    Math.ceil(fanSatBaseUp[inputInsight.vi] * (inputInsight.vi_add ? 1.2 : 1)) +
+    fanSatBaseUp[inputInsight.me] * 1 +
+    Math.ceil(fanSatBaseUp[inputInsight.ssr] * 2.5);
 
   $("#Vo_Result").text(obj.vo);
   $("#Da_Result").text(obj.da);
