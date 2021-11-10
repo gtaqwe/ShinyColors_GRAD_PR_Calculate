@@ -7,11 +7,13 @@ const fanNumBaseUp = [
 const fanSatBaseUp = [0, 1, 2, 4, 8, 12, 18, 24, 30, 35, 40, 45, 50, 55, 60, 65, 70];
 
 $().ready(function () {
-  init();
+  resetInsight();
 });
 
-async function init() {
-  // 초기화
+/**
+ * 히라메키 수 초기화
+ */
+function resetInsight() {
   [...Array(5).keys()].forEach((pos) => {
     $(`#InsightInput_${pos}`).val(0);
   });

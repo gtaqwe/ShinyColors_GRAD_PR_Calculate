@@ -98,18 +98,24 @@
     </div>
 
     <div>
-      <fieldset style="width: max-content">
-        <legend>PR</legend>
+      <div style="display: inline-block">
+        <fieldset style="width: max-content">
+          <legend>PR</legend>
 
-        <input type="radio" id="pr_1" name="pr" value="1" onclick="setResultTable()" checked />
-        <label for="pr_1">채널 인터넷 방송</label>
+          <input type="radio" id="pr_1" name="pr" value="1" onclick="setResultTable()" checked />
+          <label for="pr_1">채널 인터넷 방송</label>
 
-        <input type="radio" id="pr_2" name="pr" value="2" onclick="setResultTable()" />
-        <label for="pr_2">샵 이벤트</label>
+          <input type="radio" id="pr_2" name="pr" value="2" onclick="setResultTable()" />
+          <label for="pr_2">샵 이벤트</label>
 
-        <input type="radio" id="pr_3" name="pr" value="3" onclick="setResultTable()" />
-        <label for="pr_3">상품 프로모션</label>
-      </fieldset>
+          <input type="radio" id="pr_3" name="pr" value="3" onclick="setResultTable()" />
+          <label for="pr_3">상품 프로모션</label>
+        </fieldset>
+      </div>
+
+      <div style="display: inline-block">
+        <button style="width: 90px; height: 40px" onclick="resetInsight()">Reset</button>
+      </div>
     </div>
 
     <div>
