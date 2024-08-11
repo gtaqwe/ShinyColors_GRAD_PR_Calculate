@@ -27,6 +27,10 @@ td {
   min-width: 50px;
 }
 
+.prediction_cell {
+  background-color:#ffff00
+}
+
 fieldset {
   border: 1px solid black;
 }
